@@ -65,7 +65,7 @@ button:disabled {
 }
 
 .hero {
-  min-height: 78vh;
+  min-height: 68vh;
   display: grid;
   grid-template-rows: auto 1fr;
   position: relative;
@@ -150,16 +150,16 @@ button:disabled {
 
 .hero-inner {
   width: min(1320px, calc(100% - 40px));
-  min-height: 560px;
+  min-height: 480px;
   margin: 0 auto;
   position: relative;
   z-index: 2;
   display: grid;
-  grid-template-columns: 210px minmax(280px, 460px) minmax(420px, 1fr);
+  grid-template-columns: 210px minmax(280px, 440px) minmax(360px, 0.82fr);
   grid-template-rows: auto auto 1fr;
   column-gap: clamp(22px, 4vw, 52px);
   align-content: start;
-  padding: clamp(24px, 4vh, 44px) 0 20px;
+  padding: clamp(16px, 3vh, 30px) 0 14px;
 }
 
 .hero-title-wrap {
@@ -216,7 +216,7 @@ button:disabled {
   flex-wrap: wrap;
   gap: 10px;
   align-items: center;
-  margin: 68px 0 22px;
+  margin: 46px 0 20px;
   color: var(--blue-dark);
   font-family: "Segoe UI", "Noto Sans KR", sans-serif;
   font-size: 14px;
@@ -273,8 +273,8 @@ button:disabled {
   display: grid;
   grid-template-columns: 1fr;
   gap: 12px;
-  min-height: 440px;
-  padding: 16px;
+  min-height: 370px;
+  padding: 14px;
   border: 1px solid rgba(92, 74, 56, 0.16);
   border-radius: 8px;
   background:
@@ -758,7 +758,7 @@ button:disabled {
 
 .app-shell {
   width: min(1180px, calc(100% - 32px));
-  margin: -1px auto 72px;
+  margin: -1px auto 56px;
   position: relative;
   z-index: 2;
 }
@@ -1377,7 +1377,7 @@ textarea {
   }
 
   .hero-inner {
-    min-height: 760px;
+    min-height: 680px;
     grid-template-columns: 150px 1fr;
     column-gap: 28px;
   }
@@ -1399,7 +1399,7 @@ textarea {
 
   .hero-mascot-stage {
     grid-row: auto;
-    min-height: 330px;
+    min-height: 300px;
     margin-top: 18px;
     padding: 16px;
   }
@@ -1477,14 +1477,14 @@ textarea {
   }
 
   .hero {
-    min-height: 90vh;
+    min-height: 82vh;
   }
 
   .hero-inner {
     width: calc(100vw - 28px);
     max-width: calc(100vw - 28px);
     overflow: hidden;
-    min-height: 860px;
+    min-height: 760px;
     grid-template-columns: 88px minmax(0, 1fr);
     column-gap: 14px;
     padding-top: 30px;
