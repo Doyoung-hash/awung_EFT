@@ -65,15 +65,37 @@ button:disabled {
 }
 
 .hero {
-  min-height: 68vh;
+  min-height: 58vh;
   display: grid;
   grid-template-rows: auto 1fr;
   position: relative;
   overflow: hidden;
   background:
-    radial-gradient(circle at 84% 18%, rgba(255, 255, 255, 0.76), transparent 28%),
-    radial-gradient(circle at 16% 78%, rgba(217, 185, 141, 0.32), transparent 26%),
-    linear-gradient(180deg, #f5ead8 0%, #fff8ec 56%, #ead7bd 100%);
+    linear-gradient(180deg, rgba(246, 235, 218, 0.96), rgba(236, 216, 190, 0.94)),
+    #f0e3d2;
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  background-image: url("assets/Cat and Dog.png");
+  background-size: cover;
+  background-position: center 44%;
+  opacity: 0.34;
+  filter: saturate(0.92) contrast(0.96);
+}
+
+.hero::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  pointer-events: none;
+  background:
+    linear-gradient(90deg, rgba(246, 235, 218, 0.94) 0%, rgba(246, 235, 218, 0.82) 38%, rgba(246, 235, 218, 0.48) 100%),
+    linear-gradient(180deg, rgba(255, 250, 241, 0.82), rgba(234, 211, 181, 0.78));
 }
 
 .topbar {
@@ -150,20 +172,20 @@ button:disabled {
 
 .hero-inner {
   width: min(1320px, calc(100% - 40px));
-  min-height: 480px;
+  min-height: 390px;
   margin: 0 auto;
   position: relative;
   z-index: 2;
   display: grid;
-  grid-template-columns: 210px minmax(280px, 440px) minmax(360px, 0.82fr);
-  grid-template-rows: auto auto 1fr;
+  grid-template-columns: 210px minmax(320px, 560px);
+  grid-template-rows: auto 1fr;
   column-gap: clamp(22px, 4vw, 52px);
   align-content: start;
-  padding: clamp(16px, 3vh, 30px) 0 14px;
+  padding: clamp(18px, 3vh, 32px) 0 18px;
 }
 
 .hero-title-wrap {
-  grid-row: 1 / 4;
+  grid-row: 1 / 3;
   grid-column: 1;
   display: flex;
   align-items: flex-start;
@@ -237,7 +259,7 @@ button:disabled {
   grid-column: 2 / 3;
   min-width: 0;
   max-width: 520px;
-  margin: 0 0 24px;
+  margin: 94px 0 0;
   color: #6a4a35;
   font-family: "Segoe UI", "Noto Sans KR", sans-serif;
   font-size: clamp(17px, 1.5vw, 21px);
@@ -1377,7 +1399,7 @@ textarea {
   }
 
   .hero-inner {
-    min-height: 680px;
+    min-height: 430px;
     grid-template-columns: 150px 1fr;
     column-gap: 28px;
   }
@@ -1391,6 +1413,10 @@ textarea {
   .hero-actions,
   .hero-mascot-stage {
     grid-column: 2;
+  }
+
+  .hero p:not(.hero-kicker) {
+    margin-top: 58px;
   }
 
   .hero-meta {
@@ -1477,14 +1503,14 @@ textarea {
   }
 
   .hero {
-    min-height: 82vh;
+    min-height: 68vh;
   }
 
   .hero-inner {
     width: calc(100vw - 28px);
     max-width: calc(100vw - 28px);
     overflow: hidden;
-    min-height: 760px;
+    min-height: 520px;
     grid-template-columns: 88px minmax(0, 1fr);
     column-gap: 14px;
     padding-top: 30px;
@@ -1518,8 +1544,10 @@ textarea {
   }
 
   .hero p:not(.hero-kicker) {
-    width: min(230px, calc(100vw - 150px));
-    max-width: min(230px, calc(100vw - 150px));
+    grid-column: 1 / -1;
+    width: min(390px, 100%);
+    max-width: min(390px, 100%);
+    margin-top: 24px;
     font-size: 15px;
     line-height: 1.62;
   }

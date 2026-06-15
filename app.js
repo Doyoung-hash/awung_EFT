@@ -518,7 +518,6 @@ function verticalText(text) {
 }
 
 function render() {
-  const counselorNote = localStorage.getItem("counselorNote") || "";
   const sideNav = state.section === "counselor" && state.counselorUnlocked
     ? counselorSections.map(([id, label]) => `<button class="${state.counselorView === id ? "active" : ""}" data-counselor-view="${id}">${label}</button>`).join("")
     : sections.map(([id, label]) => `<button class="${state.section === id ? "active" : ""}" data-section="${id}">${label}</button>`).join("");
@@ -537,29 +536,7 @@ function render() {
           <h1><span class="vertical-stack">${verticalText("아웅다웅?")}</span><span class="vertical-stack">${verticalText("아름다움!")}</span></h1>
           <p class="hero-kicker vertical-stack">${verticalText("우리는 왜 싸울까?")}</p>
         </div>
-        <div class="hero-meta">
-          <span>EFT 커플 상담</span>
-          <span>갈등 유형</span>
-          <span>상담 섹션</span>
-          <span>음성사서함</span>
-          <span>회기 일기</span>
-        </div>
         <p>갈등의 말싸움 아래 숨어 있는 불안, 거리두기, 다가가고 싶은 마음을 기록하고 나누는 EFT 기반 커플 상담 웹앱입니다.</p>
-        ${counselorNote ? `<p class="hero-note">오늘의 한마디: ${escapeHtml(counselorNote)}</p>` : ""}
-        <div class="hero-actions">
-          <button class="primary-button" data-section="type">내 갈등 유형 보기</button>
-          <button class="ghost-button" data-section="comfort">상담 섹션 열기</button>
-        </div>
-        <div class="hero-mascot-stage" aria-hidden="true">
-          <div class="room-card room-card-cat image-card">
-            <img src="assets/comma-cat.png" alt="">
-            <span class="mascot-label">쉼표고양이</span>
-          </div>
-          <div class="room-card room-card-dog image-card">
-            <img src="assets/reassurance-dog.png" alt="">
-            <span class="mascot-label">안심강아지</span>
-          </div>
-        </div>
       </div>
     </header>
     <main class="app-shell">
